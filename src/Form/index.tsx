@@ -29,7 +29,7 @@ const Bar = ({ title }: { title: string }) => {
   return (
     <>
       <Button type="primary" loading={loading} onClick={run}>
-        Change
+        Query
         {data?.code !== 200 && message.warn('请求错误')}
       </Button>
       <p>{data?.name}</p>

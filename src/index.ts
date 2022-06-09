@@ -1,7 +1,3 @@
-export { default as Foo } from './Foo';
-export { default as Bar } from './Bar';
-
-type myDumi = {
-  [key: string]: any;
-};
-export default myDumi;
+export { default as Foo } from './viewComponents';
+export { default as Bar } from './Form';
+export { default as ImgZoom } from './viewComponents/Img';
