@@ -25,15 +25,17 @@ const Bar = ({ title }: { title: string }) => {
     manual: true,
   });
   console.log('data', data);
+  {
+    data?.code !== 200 ? message.warn('请求错误') : null;
+  }
 
   return (
-    <>
+    <div>
       <Button type="primary" loading={loading} onClick={run}>
-        Query
-        {data?.code !== 200 && message.warn('请求错误')}
+        <div>Query</div>
       </Button>
       <p>{data?.name}</p>
-    </>
+    </div>
   );
 };
 
