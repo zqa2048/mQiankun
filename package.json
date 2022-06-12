@@ -29,12 +29,14 @@
   "dependencies": {
     "@umijs/create-dumi-lib": "^1.1.0",
     "ahooks": "^3.4.0",
+    "pinyin": "^2.11.2",
     "react": "^16.12.0 || ^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
+    "@types/pinyin": "^2.10.0",
     "@umijs/fabric": "^2.8.1",
     "@umijs/plugin-antd": "^0.15.0",
     "@umijs/plugin-sass": "^1.1.1",

@@ -1,9 +1,24 @@
 import React, { useLayoutEffect } from 'react';
 import './index.less';
 
-export default (props: any) => {
+export interface IImgZoomProps {
+  /**
+   *
+   * @description       放大倍数
+   * @default
+   */
+  multiple: number;
+  /**
+   *
+   * @description       图片
+   * @default
+   */
+  src: string;
+}
+export default (props: IImgZoomProps) => {
+  const { multiple, src } = props;
   useLayoutEffect(() => {
-    fn(props.multiple);
+    fn(multiple);
   }, []);
   const queryElm = (tag: string): HTMLElement => {
     return document.getElementById(tag) as HTMLElement;
@@ -66,11 +81,11 @@ export default (props: any) => {
     <>
       <div className="zoom">
         <div id="small">
-          <img src={props.src} alt="" />
+          <img src={src} alt="" />
           <p id="move"></p>
         </div>
         <div id="big">
-          <img src={props.src} alt="" id="look_girl" />
+          <img src={src} alt="" id="look_girl" />
         </div>
       </div>
     </>
